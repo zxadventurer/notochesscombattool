@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <title>flexbox layout</title>
+        <meta charset='utf-8'>
+        <script type="text/javascript" src="jslibs/require.js" data-main="appscripts/main.js" >
+        </script>
+    </head>
+
+  <body>
+    <header>
+        <label>HP Value
+            <input type="number" name="HPValue" value="20">
+        </label>
+
+        <label>ATK Value
+            <input type="number" name="ATKValue" value="10">
+        </label>
+
+        <label>DEF Value
+            <input type="number" name="DEFValue" value="5">
+        </label>
+        <br/>
+        <label>FATK Value
+            <input type="number" name="FATKValue" value="10">
+        </label>
+        
+        <label>FDEF Value
+            <input type="number" name="FDEFValue" value="5">
+        </label>
+
+        <label>NO Value
+            <input type="number" name="NOValue" value="1">
+        </label>
+       
+    </header>
+    <div id='main'>
+
+        <article id='combatdisp'>
+        combatdisp
+        </article>
+
+        <aside id='unitleft'>
+            <text>unit left</text>
+            <br/>
+
+            <select id='leftTYPE'>
+                <label>Unit Type</label>
+                <option name="leftTYPE" value="Sword">Sword</option>
+                <option name="leftTYPE" value="Spear">Spear</option>
+                <option name="leftTYPE" value="Horse">Horse</option>
+                <option name="leftTYPE" value="Other">Other</option>
+            </select>
+
+            <input type="number" name="leftstartHP" min="1" max="100" value="100">
+
+            <br/>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>1⭐</td>
+                        <td>2⭐</td>
+                        <td>3⭐</td>
+                        <td>4⭐</td>
+                        <td>5⭐</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>HP</td>
+                        <td><input type="radio" name="leftHP" value="1" checked="true" /></td>
+                        <td><input type="radio" name="leftHP" value="2"/></td>
+                        <td><input type="radio" name="leftHP" value="3"/></td>
+                        <td><input type="radio" name="leftHP" value="4"/></td>
+                        <td><input type="radio" name="leftHP" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>ATK</td>
+                        <td><input type="radio" name="leftATK" value="1" checked="true"/></td>
+                        <td><input type="radio" name="leftATK" value="2"/></td>
+                        <td><input type="radio" name="leftATK" value="3"/></td>
+                        <td><input type="radio" name="leftATK" value="4"/></td>
+                        <td><input type="radio" name="leftATK" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>DEF</td>
+                        <td><input type="radio" name="leftDEF" value="1" checked="true"/></td>
+                        <td><input type="radio" name="leftDEF" value="2"/></td>
+                        <td><input type="radio" name="leftDEF" value="3"/></td>
+                        <td><input type="radio" name="leftDEF" value="4"/></td>
+                        <td><input type="radio" name="leftDEF" value="5"/></td>
+                    </tr>
+                        
+                    <tr>
+                        <td>FLANK ATK</td>
+                        <td><input type="radio" name="leftFATK" value="1" checked="true"/></td>
+                        <td><input type="radio" name="leftFATK" value="2"/></td>
+                        <td><input type="radio" name="leftFATK" value="3"/></td>
+                        <td><input type="radio" name="leftFATK" value="4"/></td>
+                        <td><input type="radio" name="leftFATK" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>FLANK DEF</td>
+                        <td><input type="radio" name="leftFDEF" value="1" checked="true"/></td>
+                        <td><input type="radio" name="leftFDEF" value="2"/></td>
+                        <td><input type="radio" name="leftFDEF" value="3"/></td>
+                        <td><input type="radio" name="leftFDEF" value="4"/></td>
+                        <td><input type="radio" name="leftFDEF" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>UNIT NO.</td>
+                        <td><input type="radio" name="leftNO" value="1" checked="true"/></td>
+                        <td><input type="radio" name="leftNO" value="2"/></td>
+                        <td><input type="radio" name="leftNO" value="3"/></td>
+                        <td><input type="radio" name="leftNO" value="4"/></td>
+                        <td><input type="radio" name="leftNO" value="5"/></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+        </aside>
+
+        <aside id='unitright'>
+            <text>unit right</text>
+            <br/>
+
+            <select id='rightTYPE'>
+                <label>Unit Type</label>
+                <option name="rightTYPE" value="Sword">Sword</option>
+                <option name="rightTYPE" value="Spear">Spear</option>
+                <option name="rightTYPE" value="Horse">Horse</option>
+                <option name="rightTYPE" value="Other">Other</option>
+            </select>
+
+            <input type="number" name="rightstartHP" min="1" max="100" value="100">
+
+            <br/>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>1⭐</td>
+                        <td>2⭐</td>
+                        <td>3⭐</td>
+                        <td>4⭐</td>
+                        <td>5⭐</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>HP</td>
+                        <td><input type="radio" name="rightHP" value="1" checked="true"/></td>
+                        <td><input type="radio" name="rightHP" value="2"/></td>
+                        <td><input type="radio" name="rightHP" value="3"/></td>
+                        <td><input type="radio" name="rightHP" value="4"/></td>
+                        <td><input type="radio" name="rightHP" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>ATK</td>
+                        <td><input type="radio" name="rightATK" value="1" checked="true"/></td>
+                        <td><input type="radio" name="rightATK" value="2"/></td>
+                        <td><input type="radio" name="rightATK" value="3"/></td>
+                        <td><input type="radio" name="rightATK" value="4"/></td>
+                        <td><input type="radio" name="rightATK" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>DEF</td>
+                        <td><input type="radio" name="rightDEF" value="1" checked="true"/></td>
+                        <td><input type="radio" name="rightDEF" value="2"/></td>
+                        <td><input type="radio" name="rightDEF" value="3"/></td>
+                        <td><input type="radio" name="rightDEF" value="4"/></td>
+                        <td><input type="radio" name="rightDEF" value="5"/></td>
+                    </tr>
+                        
+                    <tr>
+                        <td>FLANK ATK</td>
+                        <td><input type="radio" name="rightFATK" value="1" checked="true"/></td>
+                        <td><input type="radio" name="rightFATK" value="2"/></td>
+                        <td><input type="radio" name="rightFATK" value="3"/></td>
+                        <td><input type="radio" name="rightFATK" value="4"/></td>
+                        <td><input type="radio" name="rightFATK" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>FLANK DEF</td>
+                        <td><input type="radio" name="rightFDEF" value="1" checked="true"/></td>
+                        <td><input type="radio" name="rightFDEF" value="2"/></td>
+                        <td><input type="radio" name="rightFDEF" value="3"/></td>
+                        <td><input type="radio" name="rightFDEF" value="4"/></td>
+                        <td><input type="radio" name="rightFDEF" value="5"/></td>
+                    </tr>
+
+                    <tr>
+                        <td>UNIT NO.</td>
+                        <td><input type="radio" name="rightNO" value="1" checked="true"/></td>
+                        <td><input type="radio" name="rightNO" value="2"/></td>
+                        <td><input type="radio" name="rightNO" value="3"/></td>
+                        <td><input type="radio" name="rightNO" value="4"/></td>
+                        <td><input type="radio" name="rightNO" value="5"/></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </aside>
+
+    </div>
+    <footer>footer
+        <br/>
+        <label> Update
+            <input id="UpdateButton"type="button" name="execute">
+        </label>
+
+        <label> Fight
+            <input id="FightButton"type="button" name="fight">
+        </label>
+
+        <br/>
+
+        <label>Damage Multiplier
+            <input type="number" name="damageMultiplier" value="2">
+        </label>
+
+        <label>Counter Multiplier
+            <input type="number" name="counterMultiplier" value="0.2">
+        </label>
+        <br/>
+        <label>HP Multiplier
+            <input type="number" name="HPMultiplier" value="1">
+        </label>
+
+        <label>Defense Multiplier
+            <input type="number" name="defenseMultiplier" value="1">
+        </label>
+    </footer>
+    
+  </body>
+</html>
+
